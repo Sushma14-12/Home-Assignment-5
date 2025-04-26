@@ -1,0 +1,47 @@
+**Generative Adversarial Networks (GANs)** are a class of machine learning frameworks where two neural networks—the **generator** and the **discriminator**—compete in a game-theoretic setting. Here's a breakdown of how the **adversarial process** works:
+
+---
+
+### 🎯 **Goals of Each Component:**
+
+#### 1. **Generator (G)**  
+- **Goal**: Generate data (usually images) that looks as real as possible.  
+- **Input**: Random noise vector (z), usually sampled from a uniform or normal distribution.  
+- **Output**: Synthetic data (e.g., an image).  
+- **Objective**: Fool the discriminator into classifying fake data as real.
+
+#### 2. **Discriminator (D)**  
+- **Goal**: Distinguish between real data (from the dataset) and fake data (from the generator).  
+- **Input**: Either real data or synthetic data.  
+- **Output**: A probability score indicating whether the input is real (close to 1) or fake (close to 0).  
+- **Objective**: Correctly classify real vs fake.
+
+---
+
+### ⚔️ **Adversarial Training Process:**
+
+- **Step 1:** The **generator** produces fake data from random noise.
+- **Step 2:** The **discriminator** evaluates both real and generated data.
+- **Step 3:** The **discriminator** updates its weights to better classify real vs fake.
+- **Step 4:** The **generator** updates its weights to produce more realistic data and **fool** the discriminator.
+- **This competition continues** until the generated data becomes indistinguishable from real data.
+
+---
+
+### 🔄 **Optimization Objectives (Simplified):**
+
+- **Discriminator Loss (D):**
+  \[
+  \max_D \mathbb{E}[\log D(x)] + \mathbb{E}[\log(1 - D(G(z)))]
+  \]
+- **Generator Loss (G):**
+  \[
+  \min_G \mathbb{E}[\log(1 - D(G(z)))]
+  \]
+  *(Or alternatively, maximize \(\log D(G(z))\) for better gradients in practice.)*
+
+---
+
+### 🖼️ Diagram of GAN Architecture
+
+Would you like me to generate a clean diagram showing the flow between Generator, Discriminator, and their respective goals?
