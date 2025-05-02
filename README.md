@@ -8,7 +8,6 @@ CRN: 23848
 
 
 
-
 1. GAN Architecture
 
 Adversarial Process
