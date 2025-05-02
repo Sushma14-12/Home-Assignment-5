@@ -1,3 +1,10 @@
+Name:Sushma Veluru
+
+700#: 700765390
+
+CRN: 23848
+
+
 1. GAN Architecture
 
 Adversarial Process
